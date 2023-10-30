@@ -13,13 +13,13 @@ const cloudinary = require('cloudinary').v2;
 
 cloudinary.config({
     cloud_name: process.env.CLOUD_NAME,
-    api_key: process.env.CLOUND_API_KEY,
+    api_key: process.env.CLOUD_API_KEY,
     api_secret: process.env.CLOUD_API_SECRET
 });
 
 const cors = require('cors');
 const path = require('node:path');
-const { StatusCodes } = require('http-status-codes');
+const {StatusCodes} = require('http-status-codes');
 
 app.use(cors());
 
