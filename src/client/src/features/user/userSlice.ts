@@ -118,6 +118,7 @@ const userSlice = createSlice({
             state.deleteAccountLoading = true;
         }).addCase(deleteAccount.fulfilled, (state) => {
             state.deleteAccountLoading = false;
+            state.user = null;
             toast.success('Successfully Deleted Account!');
         }).addCase(deleteAccount.rejected, (state, action) => {
             state.deleteAccountLoading = false;
